@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head><title>Flight Details [cite: 3845]</title></head>
+<body>
+    <h2>Flight Details for {{ flight_number }} on {{ date }}</h2>
+    
+    {% if details %}
+        <p><strong>Total Capacity:</strong> {{ details['capacity'] }}</p>
+        <p><strong>Available Seats:</strong> {{ details['available_seats'] }}</p>
+    {% else %}
+        <p>Flight data not found.</p>
+    {% endif %}
+    
+    <br>
+    <button onclick="history.back()">Go Back to Results</button>
+</body>
+</html>

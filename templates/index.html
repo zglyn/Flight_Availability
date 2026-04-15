@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head><title>Flight Search [cite: 3843]</title></head>
+<body>
+    <h2>Search for Flights</h2>
+    <form action="/search" method="POST">
+        <label>Origin Airport Code:</label>
+        <input type="text" name="origin" required><br><br>
+        
+        <label>Destination Airport Code:</label>
+        <input type="text" name="destination" required><br><br>
+        
+        <label>Start Date:</label>
+        <input type="date" name="start_date" required><br><br>
+        
+        <label>End Date:</label>
+        <input type="date" name="end_date" required><br><br>
+        
+        <button type="submit">Search Flights</button>
+    </form>
+</body>
+</html>

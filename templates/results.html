@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head><title>Search Results [cite: 3844]</title></head>
+<body>
+    <h2>Available Flights</h2>
+    <table border="1">
+        <tr>
+            <th>Flight Number</th>
+            <th>Departure Date</th>
+            <th>Origin</th>
+            <th>Destination</th>
+            <th>Departure Time</th>
+            <th>Action</th>
+        </tr>
+        {% for flight in flights %}
+        <tr>
+            <td>{{ flight['flight_number'] }}</td>
+            <td>{{ flight['departure_date'] }}</td>
+            <td>{{ flight['origin_code'] }}</td>
+            <td>{{ flight['dest_code'] }}</td>
+            <td>{{ flight['departure_time'] }}</td>
+            <td>
+                <a href="/flight/{{ flight['flight_number'] }}/{{ flight['departure_date'] }}">
+                    Check Seats
+                </a>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+    <br>
+    <a href="/">New Search</a>
+</body>
+</html>
